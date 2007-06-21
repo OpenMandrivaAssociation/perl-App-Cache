@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    0.31
-Release:    %mkrel 5
+Release:    %mkrel 6
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Module for easy application-level caching

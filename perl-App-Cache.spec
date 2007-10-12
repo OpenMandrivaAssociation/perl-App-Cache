@@ -1,8 +1,8 @@
 %define realname   App-Cache
 
 Name:		perl-%{realname}
-Version:    0.31
-Release:    %mkrel 6
+Version:    0.33
+Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Module for easy application-level caching

@@ -8,6 +8,7 @@ Group:		Development/Perl
 Summary:    Module for easy application-level caching
 Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{realname}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{realname}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
 BuildRequires:  perl(Path::Class)
 BuildRequires:  perl(File::Find::Rule)

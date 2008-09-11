@@ -1,7 +1,7 @@
 %define realname   App-Cache
 
 Name:		perl-%{realname}
-Version:    0.34
+Version:    0.35
 Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl

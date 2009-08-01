@@ -1,15 +1,16 @@
-%define realname   App-Cache
+%define upstream_name    App-Cache
+%define upstream_version 0.36
 
-Name:		perl-%{realname}
-Version:    0.36
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:	GPL or Artistic
-Group:		Development/Perl
+
 Summary:    Module for easy application-level caching
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Path::Class)
 BuildRequires:  perl(File::Find::Rule)
 BuildRequires:  perl(Test::Pod)
@@ -17,6 +18,7 @@ BuildRequires:  perl(File::HomeDir)
 BuildRequires:  perl-libwww-perl
 BuildRequires:  perl(Class::Accessor::Chained)
 BuildArch:      noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The App::Cache module lets an application cache data locally. There are a few 
@@ -35,7 +37,7 @@ underneath "~/.parse_backpan_packages/cache/". This is so that permisssions
 are not a problem - it is a per-user, per-application cache.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -57,4 +59,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-

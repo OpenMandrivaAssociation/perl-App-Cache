@@ -8,7 +8,7 @@ Release:	5
 Summary:	Module for easy application-level caching
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel

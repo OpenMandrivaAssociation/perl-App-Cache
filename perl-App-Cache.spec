@@ -2,14 +2,14 @@
 %define upstream_version 0.37
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Module for easy application-level caching
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/App/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/App-Cache
+Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/App-Cache-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel

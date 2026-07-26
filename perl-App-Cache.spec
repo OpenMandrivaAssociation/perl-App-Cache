@@ -1,15 +1,13 @@
 %define upstream_name    App-Cache
-%define upstream_version 0.37
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.37
+Release:	7
 
 Summary:	Module for easy application-level caching
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/App-Cache
-Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/App-Cache-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/L/LB/LBROCARD/App-Cache-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -39,7 +37,7 @@ underneath "~/.parse_backpan_packages/cache/". This is so that permisssions
 are not a problem - it is a per-user, per-application cache.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -69,9 +67,7 @@ rm -rf %{buildroot}%{perl_vendorarch}
 
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.360.0-1mdv2010.0
 + Revision: 405954
-- rebuild using %%perl_convert_version
-
-* Sat Jun 27 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.36-1mdv2010.0
+- rebuild using %0.37 Sat Jun 27 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.36-1mdv2010.0
 + Revision: 389772
 - update to new version 0.36
 
